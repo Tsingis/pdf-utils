@@ -1,6 +1,9 @@
-# PDF merger
+# PDF tuls
 
-Command line script to merge/concatenate PDF files
+Command line scripts to
+
+- merge/concatenate PDF files
+- compress PDF files
 
 **Requirements:**
 
