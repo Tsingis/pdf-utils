@@ -29,12 +29,12 @@ def main():
         print(f"Error merging pdfs. {ex}")
 
 
-def merge_pdfs(pdfs: list[str], output: str):
-    print(f"""Merging pdfs [{", ".join(pdfs)}] to [{output}]""")
+def merge_pdfs(input_pdfs: list[str], output_pdf: str):
+    print(f"""Merging pdfs [{", ".join(input_pdfs)}] to [{output_pdf}]""")
     merger = PdfFileMerger()
-    for pdf in pdfs:
+    for pdf in input_pdfs:
         merger.append(pdf)
-    merger.write(output)
+    merger.write(output_pdf)
     merger.close()
 
 
