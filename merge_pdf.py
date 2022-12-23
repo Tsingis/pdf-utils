@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfMerger
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
         nargs="?",
         required=False,
         type=str,
-        default="Merged.pdf",
+        default="merged.pdf",
         help="Merged output pdf",
     )
     args = vars(parser.parse_args())
@@ -31,7 +31,7 @@ def main():
 
 def merge_pdfs(input_pdfs: list[str], output_pdf: str):
     print(f"""Merging pdfs [{", ".join(input_pdfs)}] to [{output_pdf}]""")
-    merger = PdfFileMerger()
+    merger = PdfMerger()
     for pdf in input_pdfs:
         merger.append(pdf)
     merger.write(output_pdf)

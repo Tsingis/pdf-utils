@@ -1,6 +1,6 @@
 # PDF utils
 
-Command line scripts to
+Python scripts to
 
 - merge/concatenate PDF files
 - compress PDF files

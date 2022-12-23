@@ -17,7 +17,7 @@ def main():
         nargs="?",
         required=False,
         type=str,
-        default="Compressed.pdf",
+        default="compressed.pdf",
         help="Compressed output pdf",
     )
     args = vars(parser.parse_args())
